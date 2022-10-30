@@ -14,9 +14,10 @@ module.exports = createCoreController('api::order.order',({strapi})=>({
         
         const {amount,shippingAddress,city,state,pin,token,items} = ctx.request.body
   
-        await stripe.charges.create({
+        await stripe.paymentIntents.create({
             amount: amount * 100,
             currency:"INR",
+            automatic_payment_methods: {enabled: true},
             source:token,
             description:`order by user ${ctx.state.user.email}`
         })
