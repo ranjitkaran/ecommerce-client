@@ -16,6 +16,7 @@
     "@strapi/provider-upload-cloudinary": "^4.4.5",
     "@strapi/strapi": "4.4.5",
     "better-sqlite3": "7.4.6",
+    "pg-connection-string": "^2.5.0",
     "stripe": "^10.15.0"
   },
   "author": {
